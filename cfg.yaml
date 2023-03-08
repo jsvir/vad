@@ -1,0 +1,58 @@
+threshold: 3.5
+sample_rate: &sr 16000
+device: cpu
+ckpt: sgvad.pth
+
+
+preprocessor:
+  sample_rate: *sr
+  window_size: 0.025
+  window_stride: 0.01
+  window: "hann"
+  n_mels: &n_mels 32
+  n_mfcc: *n_mels
+  n_fft: 512
+
+vad:
+  feat_in: *n_mels
+  activation: tanh
+  conv_mask: false
+
+  jasper:
+    - filters: *n_mels
+      repeat: 1
+      kernel: [11]
+      stride: [1]
+      dilation: [1]
+      dropout: 0.0
+      residual: false
+      separable: true
+      kernel_size_factor: 1.0
+
+    - filters: *n_mels
+      repeat: 1
+      kernel: [13]
+      stride: [1]
+      dilation: [1]
+      dropout: 0.0
+      residual: true
+      separable: true
+      kernel_size_factor: 1.0
+
+    - filters: *n_mels
+      repeat: 1
+      kernel: [15]
+      stride: [1]
+      dilation: [1]
+      dropout: 0.0
+      residual: true
+      separable: true
+      kernel_size_factor: 1.0
+
+    - filters: *n_mels
+      repeat: 1
+      kernel: [1]
+      stride: [1]
+      dilation: [1]
+      dropout: 0.0
+      residual: false
