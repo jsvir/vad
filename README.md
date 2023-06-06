@@ -1,4 +1,4 @@
-# An official implementation of the ICASSP 2023 paper: [SG-VAD: Stochastic Gates Based Speech Activity Detection](https://arxiv.org/abs/2210.16022)
+# An official implementation of the ICASSP 2023 paper: [SG-VAD: Stochastic Gates Based Speech Activity Detection](https://ieeexplore.ieee.org/abstract/document/10096938)
 
 # Evaluation results (published checkpoint)
 ### AVA-speech test
