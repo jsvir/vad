@@ -31,10 +31,12 @@ We thank [NeMo](https://github.com/NVIDIA/NeMo) team for their great open source
 # Citation:
 
 ```bibtex
-@article{svirsky2022sg,
+@inproceedings{svirsky2023sg,
   title={SG-VAD: Stochastic Gates Based Speech Activity Detection},
   author={Svirsky, Jonathan and Lindenbaum, Ofir},
-  journal={arXiv preprint arXiv:2210.16022},
-  year={2022}
-} 
+  booktitle={ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={1--5},
+  year={2023},
+  organization={IEEE}
+}
 ```
