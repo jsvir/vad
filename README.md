@@ -1,5 +1,10 @@
 # An official implementation of the ICASSP 2023 paper: [SG-VAD: Stochastic Gates Based Speech Activity Detection](https://ieeexplore.ieee.org/abstract/document/10096938)
 
+# UPDATES:
+
+2024-01-03: removed hard coded dependency on 36 labels exactly. Now you can defind any number of labels you want and the code should support it.
+
+
 # Evaluation results (published checkpoint)
 ### AVA-speech test
 * EER=**10.40%**
