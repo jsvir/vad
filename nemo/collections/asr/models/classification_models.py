@@ -521,7 +521,7 @@ class EncDecClassificationModel(_EncDecBaseModel):
         loss_value = self.loss(logits=logits, labels=labels)
         # print("max_label:", labels.max())
         if self.fs is not None:
-            non_speech_fs_out = fs_out[labels == 35]
+            non_speech_fs_out = fs_out[labels == len(self.cfg.labels)-1]
             reg_loss = torch.mean(0.5 - 0.5 * torch.erf((-1 / 2 - non_speech_fs_out) / math.sqrt(2)))
             self.log('reg_loss', reg_loss)
             loss_value = loss_value + self.fs.reg_lamba * reg_loss

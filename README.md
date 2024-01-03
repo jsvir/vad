@@ -12,6 +12,21 @@
 
 
 # Training
+
+In order to train a new model you need to prepare the next dataset:
+    1. The manifest file with noise audio files paths (the same duration as the audios with words), the label should be "background"
+    2. The manifest file with spoken words file paths, each word should be labeled with one category
+
+Please note that, as described in the paper, the main VAD model is trained as mask/filter as presented in the next schema:
+
+<img src="https://github.com/jsvir/vad/blob/main/train.png" width="500"/>
+
+Once the training is finished, the final model architecture is:
+
+<img src="https://github.com/jsvir/vad/blob/main/inference.png" width="200"/>
+
+
+
 1. Prepare your dataset in manifest format supported by [NeMo](https://github.com/NVIDIA/NeMo)
 2. Update config file with your paths and hyper-params
 3. Install NeMo requirements
