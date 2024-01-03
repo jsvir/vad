@@ -19,11 +19,11 @@ In order to train a new model you need to prepare the next dataset:
 
 Please note that, as described in the paper, the main VAD model is trained as mask/filter as presented in the next schema:
 
-<img src="https://github.com/jsvir/vad/blob/main/train.png" width="500"/>
+<img src="https://github.com/jsvir/vad/tree/main/imgs/train.png" width="500"/>
 
 Once the training is finished, the final model architecture is:
 
-<img src="https://github.com/jsvir/vad/blob/main/inference.png" width="200"/>
+<img src="https://github.com/jsvir/vad/tree/main/imgs/inference.png" width="200"/>
 
 
 
