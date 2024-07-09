@@ -2,7 +2,7 @@
 
 # UPDATES:
 
-2024-01-03: removed hard coded dependency on 36 labels exactly. Now you can defind any number of labels you want and the code should support it.
+2024-01-03: removed hard-coded dependency on 36 labels exactly. Now you can define any number of labels you want and the code should support it.
 
 
 # Evaluation results (published checkpoint)
@@ -18,8 +18,8 @@
 
 # Training
 
-In order to train a new model you need to prepare the next dataset:
-    1. The manifest file with noise audio files paths (the same duration as the audios with words), the label should be "background"
+To train a new model you need to prepare the next dataset:
+    1. The manifest file with noise audio file paths (the same duration as the audios with words), the label should be "background"
     2. The manifest file with spoken words file paths, each word should be labeled with one category
 
 Please note that, as described in the paper, the main VAD model is trained as mask/filter as presented in the next schema:
@@ -46,7 +46,7 @@ Once the training is finished, the final model architecture is:
 
 # Aknowledgements:
 
-We thank [NeMo](https://github.com/NVIDIA/NeMo) team for their great open source repo.
+We thank [NeMo](https://github.com/NVIDIA/NeMo) team for their great open-source repo.
 
 # Citation:
 
