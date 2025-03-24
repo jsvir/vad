@@ -2,8 +2,12 @@
 
 # UPDATES:
 
-2024-01-03: removed hard-coded dependency on 36 labels exactly. Now you can define any number of labels you want and the code should support it.
-
+* 2025-03-24: we have found a bug in label creation for **HAVIC** test set, after fixing it and including only the categories `['noise', 'background_noise', 'music', 'baby']` as non-speech classes, we get better than reported in the paper results:
+    ### HAVIC test
+    * EER: **21.33%**
+    * ROCAUC: **85.31**
+    
+* 2024-01-03: removed hard-coded dependency on 36 labels exactly. Now you can define any number of labels you want and the code should support it.
 
 # Evaluation results (published checkpoint)
 ### AVA-speech test
